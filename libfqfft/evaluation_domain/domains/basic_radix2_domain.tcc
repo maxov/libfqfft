@@ -36,7 +36,7 @@ basic_radix2_domain<FieldT>::basic_radix2_domain(const size_t m) : evaluation_do
     try { omega = libff::get_root_of_unity<FieldT>(m); }
     catch (const std::invalid_argument& e) { 
         // DEBUGGING
-        std::cout << "exception: " << e.what() << "\n";
+        std::cout << "exception: " << e.what() << " with n " << m << "\n";
         throw DomainSizeException(e.what()); }
 }
 
